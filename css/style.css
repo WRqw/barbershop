@@ -1,17 +1,105 @@
 body{
 	margin: 0;
 	padding: 0;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	min-width: 960px;
+	background: #111 url("../img/bg.jpg") no-repeat center top;
 }
-.clearfix:before,
-.clearfix:after {
+.main-header{
+	margin-bottom: 60px;
+	background: black;
+}
+.container{
+	width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.main-navigation{
+	float: left;
+	border: 1px dotted #fff;
+	width: 780px;
+}
+.user-block{
+	float: right;
+	border: 1px dotted #fff;
+	max-width: 140px;
+}
 
-     content: ".";
-     display: table;
-}
 .clearfix:after {
-	content: ".";
-	display: block;
-	height: 0;
+	content: "";
+	display: table;
 	clear: both;
-	visibility: hidden;
+	
+}
+.main-navigation ul{
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	list-style: none;
+}
+
+.main-navigation li{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+	line-height: 20px;
+}
+.main-navigation a{
+	display: block;
+	padding: 25px 20px;
+	text-decoration: none;
+	color: #fff;
+}
+.main-navigation a:hover{
+	background: #242424;
+}
+.main-navigation .active a{
+	position: relative;
+}
+.main-navigation .active a:after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+	right: 20px;
+	
+	height: 5px;
+	background: white;
+}
+.login{
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	padding: 25px 20px;
+	font-size: 16px;
+	line-height: 20px;
+	text-decoration: none;
+	color: #fff;
+	padding-left: 50px;
+}
+.login:before{
+	content: "";
+	position: absolute;
+	
+	top: 28px;
+	left: 20px;
+	width: 18px;
+	height: 18px;
+	background: url("../img/enter-sprite.png") no-repeat;
+}
+.login:hover:before{
+	content: "";
+	position: absolute;
+	top: 28px;
+	left: 20px;
+	content: "";
+	width: 18px;
+	height: 18px;
+	background: url("../img/enter-sprite.png") no-repeat;
+	background-position: 0 -102px;
 }
