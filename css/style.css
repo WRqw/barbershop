@@ -279,3 +279,66 @@ body{
 	clear: both;
 	width: 100%;
 }
+.main-footer{
+	margin-top: 60px;
+	padding-top: 60px;
+	padding-bottom: 40px;
+	background: #232323 url("../img/footer-bg.png")
+}
+.footer-contacts{
+	float: left;
+	width: 320px;
+	margin-right: 80px;
+}
+.footer-contacts a{
+	color: #fff;
+}
+.footer-social{
+	float: left;
+	text-align: center;
+}
+
+.footer-copyright{
+	float: right;
+	max-width: 320px;
+}
+.footer-contacts a:hover{
+	text-decoration: none;
+}
+.footer-social p{
+	margin: 0;
+	margin-bottom: 15px;
+}
+.social-btn{
+	margin: 0 2px;
+	display: inline-block;
+	vertical-align: top;
+	width: 43px;
+	height: 43px;
+	font-size: 0;
+	text-decoration: none;
+	background: #000 url("../img/social-sprite.png")
+}
+.social-btn-vk{
+	background-position: 0 0;
+}
+.social-btn-fb{
+	background-position: -43px 0;
+}
+.social-btn-inst{
+	background-position: -86px 0;
+}
+.social-btn-vk:hover{
+	background-position: 0 -43px;
+}
+.social-btn-fb:hover{
+	background-position: -43px -43px;
+}
+.social-btn-inst:hover{
+	background-position: -86px -43px;
+}
+.footer-copyright p{
+	margin: 0;
+	margin-bottom: 15px;
+	text-align: center;
+}
