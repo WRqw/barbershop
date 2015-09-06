@@ -11,8 +11,9 @@ body{
 	background: #111 url("../img/bg.jpg") no-repeat center top;
 }
 .main-header{
+	background: #000;
 	margin-bottom: 60px;
-	background: black;
+	
 }
 .container{
 	width: 940px;
@@ -20,13 +21,12 @@ body{
 	padding: 0 10px;
 }
 .main-navigation{
+
 	float: left;
-	border: 1px dotted #fff;
 	width: 780px;
 }
 .user-block{
 	float: right;
-	border: 1px dotted #fff;
 	max-width: 140px;
 }
 
@@ -102,4 +102,49 @@ body{
 	height: 18px;
 	background: url("../img/enter-sprite.png") no-repeat;
 	background-position: 0 -102px;
+}
+.logo{
+	width: 368px;
+	height: 204px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+.logo img{
+	width: 368px;
+	height: 204px;
+}
+.features-row{
+	margin-bottom: 80px;
+}
+.features-item{
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	text-align: center;
+}
+.features-item:last-child{
+	margin-right: 0;
+}
+.features-title{
+	position: relative;
+	padding-bottom: 50px;
+	margin-bottom: 30px;
+	font-size: 30px;
+	line-height: 42px;
+}
+.features-item p{
+	margin: 10px;
+}
+.features-title:after{
+	content: "";
+
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -10px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	transform: rotate(45deg);
 }
