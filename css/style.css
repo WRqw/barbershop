@@ -10,10 +10,61 @@ body{
 	min-width: 960px;
 	background: #111 url("../img/bg.jpg") no-repeat center top;
 }
+body.inner-page{
+	background: #f9f6f3 url("../img/price-bg.png") repeat;
+	color: #000;
+}
 .main-header{
 	background: #000;
 	margin-bottom: 60px;
+	color: #fff;
 	
+}
+.inner-page-title{
+	margin-bottom: 55px;
+}
+.inner-page .main-header{
+	margin-bottom: 55px;
+}
+.inner-page-title h1{
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	font-size: 30px;
+	line-height: 42px;
+}
+.breadcrumbs{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.breadcrumbs li{
+	display: inline;
+	padding-right: 40px;
+	position: relative;
+}
+.breadcrumbs li:after{
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	width: 8px;
+	height: 8px;
+	background: #000;
+	transform: rotate(45deg);
+}
+.breadcrumbs a{
+	text-decoration: none;
+	color: #000;
+}
+.breadcrumbs a:hover{
+	text-decoration: underline;
+}
+.breadcrumbs .current{
+	color: #aba9a7;
+}
+.breadcrumbs .current:after{
+	display: none;
 }
 .container{
 	width: 940px;
@@ -283,7 +334,8 @@ body{
 	margin-top: 60px;
 	padding-top: 60px;
 	padding-bottom: 40px;
-	background: #232323 url("../img/footer-bg.png")
+	background: #232323 url("../img/footer-bg.png");
+	color: #fff;
 }
 .footer-contacts{
 	float: left;
