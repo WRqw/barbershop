@@ -493,7 +493,7 @@ body{
 	text-align: center;
 }
 .modal-content{
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 50%;
 	width: 300px;
@@ -503,6 +503,10 @@ body{
 	background: #f9f6f3 url("../img/price-bg.png");
 	box-shadow: 0 30px 50px rgba(0,0,0,.7);
 	color: black;
+	display: none;
+}
+.modal-content-show{
+	display: block;
 }
 .modal-content-close{
 	position: absolute;
@@ -514,6 +518,9 @@ body{
 	cursor: pointer;
 	background: url("../img/cross.png") no-repeat center;
 	
+}
+.modal-content-close:hover{
+	background: url("../img/cross-hov.png") no-repeat center;
 }
 .modal-content h2{
 	margin: 0;
@@ -607,4 +614,5 @@ body{
 	margin-left: -390px;
 	margin-top: -287.5px;
 	border: 7px solid white;
+	background: #e9e5dc url("")
 }

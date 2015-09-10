@@ -139,7 +139,8 @@
 	</footer>
 	
 	<div class="modal-content">
-		<div class="modal-content-close">Закрыть.</div>
+		<div class="modal-content-close" title="Закрыть">Закрыть</div>
+
 		<h2 class="modal-content-title">Личный кабинет</h2>
 		<p>Введите пожалуйста свой логин и пароль</p>
 		<form action="/echo" method="post" class="login-form">
@@ -151,8 +152,61 @@
 			<button type="submit" class="btn">Войти</button>
 		</form>
 	</div>
-	<!--<div class="modal-content-map">
-		<div class="modal-content-close">закрыть</div>
-	</div>-->
+
+	<script>
+
+
+	var link = document.querySelector('.login');
+	var popup = document.querySelector('.modal-content');
+	var close = document.querySelector('.modal-content-close');
+	var login = popup.querySelector("[name=login]");
+	var password = popup.querySelector("[name=password]");
+	var form = popup.querySelector("form");
+	var storage = localStorage.getItem("login");
+
+	window.addEventListener("keydown", function(event) {
+		if (event.keyCode == 27) {
+			if (popup.classList.contains("modal-content-show")) {
+			popup.classList.remove("modal-content-show");
+		}
+	}
+	});
+
+  	link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-content-show");
+        login.focus();
+
+        if (storage) {
+        	login.value = storage;
+        	password.focus();
+        } else {
+        	login.focus();
+        }	
+		});
+
+
+	close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-content-show");
+     	});
+
+	form.addEventListener("submit", function(event){
+		if (!(login.value && password.value)) {
+			event.preventDefault();
+			alert("Неверный логин или пароль")
+		} else {
+			localStorage.setItem("login", login.value);
+
+		}
+		event.preventDefault();
+
+		
+		
+		
+		alert("Отправка формы " + login.value + " " + password.value);
+	})
+    		
+	</script>
 </body>
 </html>
